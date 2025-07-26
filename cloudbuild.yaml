@@ -1,0 +1,16 @@
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/pulse-bengaluru-agent:$COMMIT_SHA', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/$PROJECT_ID/pulse-bengaluru-agent:$COMMIT_SHA' ]
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args: [
+    'ai', 'agents', 'deploy',
+    '--project_id=$PROJECT_ID',
+    '--location=$LOCATION',
+    '--bucket=$BUCKET',
+    '--resource_id=pulse-bengaluru-agent',
+    '--image=gcr.io/$PROJECT_ID/pulse-bengaluru-agent:$COMMIT_SHA'
+  ]
