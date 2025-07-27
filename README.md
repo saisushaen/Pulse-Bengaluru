@@ -1,103 +1,106 @@
-# Agent Development Kit (ADK) Crash Course
+# Pulse Bengaluru Agent
 
-This repository contains examples for learning Google's Agent Development Kit (ADK), a powerful framework for building LLM-powered agents.
+This repository contains the implementation of the Pulse Bengaluru Agent, a multi-agent system designed to analyze various aspects related to Bengaluru, including network quality, radio charter data, and social media sentiment. The project leverages Google's Agent Development Kit (ADK) and LangChain for building sophisticated LLM-powered agents.
 
-## Getting Started
+## Technologies Used
 
-### Setup Environment
+The project primarily uses Python and the following key libraries:
 
-You only need to create one virtual environment for all examples in this course. Follow these steps to set it up:
+*   **`google-generativeai`**: For interacting with Google's Generative AI models.
+*   **`langchain`**: A framework for developing applications powered by language models.
+*   **`langchain-google-genai`**: LangChain integration for Google Generative AI.
+*   **`langchain-core`**: Core abstractions for LangChain.
+*   **`langchain-community`**: Community integrations for LangChain.
+*   **`python-dotenv`**: For managing environment variables.
+
+## Project Structure
+
+The repository is organized into two main components:
+
+*   **`pulse_bengaluru_agent-parent/`**: This directory contains the main multi-agent application.
+    *   `main.py`: The entry point for running the main agent.
+    *   `agent.py`: Defines the orchestrating agent.
+    *   `sub_agents/`: Contains specialized sub-agents.
+        *   `network_quality_analyst/`: Agent focused on analyzing network quality data.
+        *   `radio_charter_analyst/`: Agent focused on analyzing radio charter data.
+        *   `social_media_analyst/`: Agent focused on analyzing social media sentiment.
+    *   `tools/`: Contains custom tools used by the agents.
+*   **`pulse_cloud_fn/`**: This directory contains the necessary files for deploying the agent as a Google Cloud Function.
+    *   `main.py`: The entry point for the Cloud Function.
+    *   `requirements.txt`: Dependencies specific to the Cloud Function environment.
+
+## Getting Started (Local Setup)
+
+Follow these steps to set up the project and run the agent locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository_url>
+cd "Agentic AI Day Hackathon" # Or the name of your cloned directory
+```
+
+### 2. Setup Python Virtual Environment
+
+It's recommended to use a virtual environment to manage dependencies.
 
 ```bash
 # Create virtual environment in the root directory
 python -m venv .venv
 
-# Activate (each new terminal)
+# Activate the virtual environment
 # macOS/Linux:
 source .venv/bin/activate
 # Windows CMD:
 .venv\Scripts\activate.bat
 # Windows PowerShell:
 .venv\Scripts\Activate.ps1
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
-Once set up, this single environment will work for all examples in the repository.
+### 3. Install Dependencies
 
-### Setting Up API Keys
+Install the required Python packages for both the main agent and the cloud function.
 
-1. Create an account in Google Cloud https://cloud.google.com/?hl=en
-2. Create a new project
-3. Go to https://aistudio.google.com/apikey
-4. Create an API key
-5. Assign key to the project
-6. Connect to a billing account
+```bash
+pip install -r pulse_bengaluru_agent-parent/requirements.txt
+pip install -r pulse_cloud_fn/requirements.txt
+```
 
-Each example folder contains a `.env.example` file. For each project you want to run:
+### 4. Setting Up Google API Key
 
-1. Navigate to the example folder
-2. Rename `.env.example` to `.env` 
-3. Open the `.env` file and replace the placeholder with your API key:
-   ```
-   GOOGLE_API_KEY=your_api_key_here
-   ```
+The agents require a Google API Key to interact with Generative AI models.
 
-You'll need to repeat this for each example project you want to run.
+1.  Create an account in Google Cloud: [https://cloud.google.com/](https://cloud.google.com/)
+2.  Create a new project within Google Cloud.
+3.  Go to Google AI Studio API Keys: [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+4.  Create a new API key and associate it with your Google Cloud project.
+5.  Ensure your Google Cloud project has a billing account connected (required for some API usage).
 
-## Examples Overview
+After obtaining your API key:
 
-Here's what you can learn from each example folder:
+1.  Navigate to the `pulse_bengaluru_agent-parent/` directory.
+2.  Create a new file named `.env` in this directory.
+3.  Add your API key to the `.env` file in the following format:
+    ```
+    GOOGLE_API_KEY=your_api_key_here
+    ```
+    Replace `your_api_key_here` with your actual Google API Key.
 
-### 1. Basic Agent
-Introduction to the simplest form of ADK agents. Learn how to create a basic agent that can respond to user queries.
+### 5. Running the Main Agent Locally
 
-### 2. Tool Agent
-Learn how to enhance agents with tools that allow them to perform actions beyond just generating text.
+Once the environment is set up and the API key is configured, you can run the main agent:
 
-### 3. LiteLLM Agent
-Example of using LiteLLM to abstract away LLM provider details and easily switch between different models.
+```bash
+cd pulse_bengaluru_agent-parent/
+python main.py
+```
 
-### 4. Structured Outputs
-Learn how to use Pydantic models with `output_schema` to ensure consistent, structured responses from your agents.
+This will start the main agent, and you can interact with it through the console.
 
-### 5. Sessions and State
-Understand how to maintain state and memory across multiple interactions using sessions.
+## Sub-Agents Overview
 
-### 6. Persistent Storage
-Learn techniques for storing agent data persistently across sessions and application restarts.
+*   **Network Quality Analyst**: Specializes in processing and analyzing data related to network performance and quality.
+*   **Radio Charter Analyst**: Focuses on analyzing radio charter data, potentially for frequency allocation, signal strength, or regulatory compliance.
+*   **Social Media Analyst**: Designed to monitor and analyze social media trends, sentiment, and discussions relevant to Bengaluru.
 
-### 7. Multi-Agent
-See how to orchestrate multiple specialized agents working together to solve complex tasks.
-
-### 8. Stateful Multi-Agent
-Build agents that maintain and update state throughout complex multi-turn conversations.
-
-### 9. Callbacks
-Implement event callbacks to monitor and respond to agent behaviors in real-time.
-
-### 10. Sequential Agent
-Create pipeline workflows where agents operate in a defined sequence to process information.
-
-### 11. Parallel Agent
-Leverage concurrent operations with parallel agents for improved efficiency and performance.
-
-### 12. Loop Agent
-Build sophisticated agents that can iteratively refine their outputs through feedback loops.
-
-## Official Documentation
-
-For more detailed information, check out the official ADK documentation:
-- https://google.github.io/adk-docs/get-started/quickstart
-
-## Support
-
-Need help or run into issues? Join our free AI Developer Accelerator community on Skool:
-- [AI Developer Accelerator Community](https://www.skool.com/ai-developer-accelerator/about)
-
-In the community you'll find:
-- Weekly coaching and support calls
-- Early access to code from YouTube projects
-- A network of AI developers of all skill levels ready to help
-- Behind-the-scenes looks at how these apps are built
+Each sub-agent contributes to a comprehensive understanding of the Bengaluru context by providing specialized insights.
