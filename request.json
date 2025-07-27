@@ -1,0 +1,199 @@
+
+  
+
+  {
+    "instances": [
+      {
+        "input": {
+            "network_quality_agent": {
+              "Area": "HSR Layout",
+              "history": [
+                {
+                  "DateTime": "2025-07-26T12:40:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 66.95,
+                  "Upload_Speed_Mbps": 53.24,
+                  "Latency_ms": 42.08,
+                  "Packet_Loss_Percent": 1.58,
+                  "Signal_Strength_dBm": -96.7,
+                  "Jitter_ms": 47.52,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T12:50:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 4,
+                  "Network_Quality_Name": "Excellent",
+                  "Download_Speed_Mbps": 87.89,
+                  "Upload_Speed_Mbps": 22.33,
+                  "Latency_ms": 37.68,
+                  "Packet_Loss_Percent": 0.41,
+                  "Signal_Strength_dBm": -65.1,
+                  "Jitter_ms": 5.14,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T13:00:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 48.68,
+                  "Upload_Speed_Mbps": 6.37,
+                  "Latency_ms": 36.9,
+                  "Packet_Loss_Percent": 1.1,
+                  "Signal_Strength_dBm": -105.5,
+                  "Jitter_ms": 20.78,
+                  "Provider": "Provider_C"
+                },
+                {
+                  "DateTime": "2025-07-26T13:10:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 5,
+                  "Network_Quality_Name": "Superior",
+                  "Download_Speed_Mbps": 141.71,
+                  "Upload_Speed_Mbps": 68.83,
+                  "Latency_ms": 9.01,
+                  "Packet_Loss_Percent": 0.27,
+                  "Jitter_ms": 38.8,
+                  "Provider": "Provider_B",
+                  "Signal_Strength_dBm": -97.7
+                },
+                {
+                  "DateTime": "2025-07-26T13:20:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 71.38,
+                  "Upload_Speed_Mbps": 38.15,
+                  "Latency_ms": 32.05,
+                  "Packet_Loss_Percent": 1.83,
+                  "Signal_Strength_dBm": -77.2,
+                  "Jitter_ms": 5.97,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T13:30:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 58.32,
+                  "Upload_Speed_Mbps": 19.35,
+                  "Latency_ms": 38.61,
+                  "Packet_Loss_Percent": 0.6,
+                  "Signal_Strength_dBm": -75.4,
+                  "Jitter_ms": 33.82,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T13:40:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 55.45,
+                  "Upload_Speed_Mbps": 33.99,
+                  "Latency_ms": 26.77,
+                  "Packet_Loss_Percent": 1.82,
+                  "Signal_Strength_dBm": -92,
+                  "Jitter_ms": 9.94,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T13:50:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 5,
+                  "Network_Quality_Name": "Superior",
+                  "Download_Speed_Mbps": 129.24,
+                  "Upload_Speed_Mbps": 34.51,
+                  "Latency_ms": 15.2,
+                  "Packet_Loss_Percent": 0.13,
+                  "Signal_Strength_dBm": -100.7,
+                  "Jitter_ms": 28.61,
+                  "Provider": "Provider_C"
+                },
+                {
+                  "DateTime": "2025-07-26T14:00:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 72.07,
+                  "Upload_Speed_Mbps": 44.37,
+                  "Latency_ms": 78.77,
+                  "Packet_Loss_Percent": 0.61,
+                  "Signal_Strength_dBm": -99.8,
+                  "Jitter_ms": 31.35,
+                  "Provider": "Provider_A"
+                },
+                {
+                  "DateTime": "2025-07-26T14:10:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 3,
+                  "Network_Quality_Name": "Good",
+                  "Download_Speed_Mbps": 77.44,
+                  "Upload_Speed_Mbps": 21.37,
+                  "Latency_ms": 37.72,
+                  "Packet_Loss_Percent": 0.55,
+                  "Signal_Strength_dBm": -97.7,
+                  "Jitter_ms": 41.75,
+                  "Provider": "Provider_B"
+                },
+                {
+                  "DateTime": "2025-07-26T14:20:00",
+                  "Area": "HSR Layout",
+                  "Network_Quality_Score": 4,
+                  "Network_Quality_Name": "Excellent",
+                  "Download_Speed_Mbps": 89.66,
+                  "Upload_Speed_Mbps": 45.66,
+                  "Latency_ms": 34.26,
+                  "Packet_Loss_Percent": 0.84,
+                  "Signal_Strength_dBm": -99.1,
+                  "Jitter_ms": 17.33,
+                  "Provider": "Provider_C"
+                }
+              ],
+              "Latest": {
+                "DateTime": "2025-07-26T14:30:00",
+                "Area": "HSR Layout",
+                "Network_Quality_Score": 2,
+                "Network_Quality_Name": "Fair",
+                "Download_Speed_Mbps": 21,
+                "Upload_Speed_Mbps": 4.63,
+                "Latency_ms": 119.01,
+                "Packet_Loss_Percent": 1.61,
+                "Signal_Strength_dBm": -78.4,
+                "Jitter_ms": 12.15,
+                "Provider": "Provider_C"
+              }
+            },
+            "radio_charter_data": [
+              {
+                "DateTime": "2025-07-26T14:15:00",
+                "Transcript": "Multiple complaints from Sector 6, 27th Main 22nd Cross area. Investigation team dispatched. Expected resolution within 1 hour."
+              },
+              {
+                "DateTime": "2025-07-26T14:15:30",
+                "Transcript": "Accident reported near Sector 6, 27th Main 1st Cross. Three vehicles involved. Traffic being diverted via alternate routes."
+              },
+              {
+                "DateTime": "2025-07-26T14:16:00",
+                "Transcript": "Routine patrol unit TR-HSR-02 reports unusual activity near Sector 6. Monitoring situation."
+              },
+              {
+                "DateTime": "2025-07-26T14:27:00",
+                "Transcript": "Incident 1 at Sector 6 - Additional units requested. ETA 10 minutes."
+              },
+              {
+                "DateTime": "2025-07-26T14:28:30",
+                "Transcript": "Incident 1: Emergency services departing Sector 6. All clear."
+              },
+              {
+                "DateTime": "2025-07-26T14:30:00",
+                "Transcript": "Peak hour congestion at Sector 7. Signal timing adjusted. Expect gradual improvement."
+              }
+            ]
+          }
+      }
+    ]
+  }
+  

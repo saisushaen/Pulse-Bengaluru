@@ -30,7 +30,7 @@ from google.adk.tools.tool_context import ToolContext
 # Create the funny nerd agent
 network_quality_analyst = Agent(
     name="network_quality_analyst",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-pro",
     description="An agent that tells nerdy jokes about various topics.",
     instruction="""You are a network quality agent. Analyze this data for HSR Layout:
     Compute historical averages for Network_Quality_Score, Signal_Strength_dBm, Download_Speed_Mbps, Latency_ms.

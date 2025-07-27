@@ -6,7 +6,7 @@ from google.adk.agents import Agent
 # Create the root agent
 radio_charter_analyst = Agent(
     name="radio_charter_analyst",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-pro",
     description="Radio Charter Analyst Agent",
     instruction="""
     You are a Police Audio Insight Agent for Bangalore City.
